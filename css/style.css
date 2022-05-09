@@ -1,0 +1,714 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Barlow:regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,italic,600,600italic&display=swap");
+
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../fonts/CircularStd-Black.woff2") format("woff2"), url("../fonts/CircularStd-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Обнуление стилей */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1;
+}
+
+/* ------------- */
+
+/* Общие стили */
+
+body {
+  font-family: "Roboto", sans-serif;    
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*=__container] {
+  max-width: 1050px;
+  margin: 0px auto;
+  padding: 0px 15px;
+}
+
+.footer {
+  background-color: burlywood;
+  padding: 15px;
+}
+
+.header {
+  background-color: burlywood;
+  padding: 15px;
+}
+
+.main { 
+  flex-grow: 1;
+}
+
+.button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 2;  
+  letter-spacing: 0.15px;
+  text-transform: uppercase;  
+  color: #FFFFFF;
+  border-radius: 8px;
+  background-color: #f2726f;
+  padding: 12px 25px;      
+  text-align: center;  
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+textarea:focus::placeholder,
+input:focus::placeholder {
+	opacity: 0;
+}
+
+/* блок make-an */
+
+.page__an-make {
+  background: url("../img/make_an/Make_an.jpg") 0 0 / cover no-repeat;
+  padding: 130px 0px 210px 0px;
+  margin-bottom: 50px;
+}
+
+.make-an__container {
+  position: relative;
+}
+
+.make-an__container::before {
+  content: "";
+  background: url("../img/make_an/circles.svg") 0 0 no-repeat;
+  top: 110px;
+  left: -95px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.make-an__container::after {
+  content: "";
+  background: url("../img/make_an/blob.svg") 0 0 no-repeat;
+  top: -136px;
+  left: -190px;
+  position: absolute;
+  width: 894px;
+  height: 934px;
+  z-index: 2;
+}
+
+.make-an__content {
+  display: flex;
+  color: #FFFFFF;
+  position: relative;
+  z-index: 3;
+}
+
+.make-an__forms {
+  padding: 76px 57px;
+  flex: 0 1 57.35%;
+  background: #5D62B5;
+  border-radius: 40px;
+  filter: drop-shadow(0px 8px 16px rgba(38, 38, 38, 0.24)) drop-shadow(0px 16px 24px rgba(38, 38, 38, 0.2));
+}
+
+.form-make__title {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.form-make__title:not(:last-child) {
+  margin: 0 0 48px 0;
+}
+
+.form-make__body {
+  display: flex;
+  flex-direction: column;  
+}
+
+.body-item__columns { 
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 22px;
+  margin: 0px -10px;
+}
+
+.body-item__columns:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.body-item__column {
+  flex: 1 1 50%;
+  min-width: 224px;
+  padding: 0px 10px;
+}
+
+.body-item__columns *::placeholder {
+  color: #FFFFFF;  
+}
+
+.body-item__column input, textarea {
+  height: 48px;
+  width: 100%;
+  letter-spacing: 0.15px;
+  line-height: 1.5;
+  background: #5D62B5;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;  
+  padding: 0px 24px;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease 0s;
+}
+
+.body-item__service {
+  height: 48px;
+  width: 100%;
+  letter-spacing: 0.15px;
+  line-height: 1.5;
+  background: #5D62B5;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;  
+  padding: 0px 24px;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease 0s;
+}
+
+
+.body-item__column select:hover {
+  background-color: #4b51be;
+  outline: 2px solid rgba(255, 0, 0, 0.749);
+}
+
+.body-item__column textarea:hover {
+  background-color: #4b51be;
+  outline: 2px solid rgba(255, 0, 0, 0.749);
+}
+
+.body-item__column input:hover {
+  background-color: #4b51be;
+  outline: 2px solid rgba(255, 0, 0, 0.749);
+}
+
+.body-item__service {
+  color: #FFFFFF;
+}
+
+.body-item__textarea {
+  padding: 15px 24px;
+  max-height: 350px;
+  min-height: 180px;
+}
+
+.body-item__make {
+  align-self: flex-end;
+}
+
+.button:hover {
+  background-color: #aa4442;
+  outline: 2px solid rgba(255, 0, 0, 0.749);
+}
+
+.make-an__body {
+  padding: 166px 0 0 111px;
+  flex: 0 1 42.65%; 
+  text-align: center;
+  font-weight: 900;
+}
+
+.make-an__text {  
+  font-size: 30px;
+  line-height: 1.2;  
+}
+
+.make-an__text:not(:last-child) {
+  margin: 0 0 46px 0;
+}
+
+.make-an__statistics {
+  font-size: 96px;
+  line-height: 0.58;
+}
+
+.make-an__statistics:not(:last-child) {
+  margin: 0 0 46px 0;
+}
+
+.make-an__label {  
+  font-size: 19px;
+  line-height: 1.37;
+}
+
+/* блок customers */
+
+.page__customers {
+  margin-bottom: 50px; 
+}
+
+.customers__container {
+  background-color: #F5F7FF;;
+  max-width: 564px;
+  font-family: "Poppins", sans-serif;
+  padding: 37px 57.5px 41px;
+}
+.customers__title {
+  margin-bottom: 17px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.customers__text {
+  margin-bottom: 22px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2.14;
+}
+.customers__form  input, button{
+  font-family: "Poppins", sans-serif;
+}
+
+.form-customers {
+  display: flex;
+  flex-direction: column; 
+}
+
+.form-customers__email {
+  margin: 0 0 6px 0;
+}
+
+.label {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+.span {
+  color: red;
+}
+
+.email-customer {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-customers__pass {
+  margin: 0 0 30px 0;
+}
+
+.pass-customer {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  background-color: #FFFFFF;  
+  border: 1px solid #A2A6B0;
+  border-radius: 4px;
+  height: 50px;
+  padding-left: 17px;
+}
+
+.form-customers input {
+  transition: all 0.3s ease 0s;
+}
+
+.form-customers input:hover {
+  background-color: #f3f4f7;
+  outline: 2px solid #eee7e7;
+}
+
+.form-customers__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 23px;
+  align-items: flex-start;
+}
+.form-customers__button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;  
+  text-align: center;
+  color: #FFFFFF;
+  background: #0156FF;
+  border-radius: 50px;
+  min-height: 50px;
+  padding: 15px 50px;
+  transition: all 0.3s ease 0s;
+}
+
+.form-customers__button:hover {
+  background-color: #073aa2;
+}
+
+.form-customers__link {  
+  align-self: center;  
+  font-size: 14px;
+  line-height: 1.43;
+  color: #0156FF;
+}
+
+/* блок summary */
+
+.page__summary {
+  margin-bottom: 50px;
+}
+
+.summary__container {
+  background: #F5F7FF;
+  font-family: "Poppins", sans-serif;
+  padding: 18px 31px;
+  max-width: 446px;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0 0 18.57px 0;
+}
+.summary__subtitle {  
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 12.43px 0;
+}
+.summary__text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12.43px 0;
+  max-width: 287px;
+}
+
+.summary__destination {
+  margin: 0 0 17px 0;
+}
+
+.summary__item input, select{
+  transition: all 0.3s ease 0s;
+}
+
+.summary__item:not(:last-child) {
+  margin: 0 0 5px 0;
+}
+
+.summary__item input:hover {
+  background-color: #f3f4f7;
+}
+
+.summary__item select:hover {
+  background-color: #f3f4f7;
+}
+
+.summary__label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 2.1;
+  color: #000000;
+  display: block;
+}
+.summary__line {
+  background: #FFFFFF;
+  border: 1px solid #A2A6B0;
+  border-radius: 4px;
+  padding: 0 0 0 17px;
+  line-height: 1.43;
+  height: 50px;
+  min-width: 386px;
+}
+
+.summary__radiobutton {
+  margin-bottom: 15px;
+}
+
+.radiobutton__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.radiobutton__subtitle {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 2.1;
+  color: #000000;
+}
+.radiobutton__item {
+  display: flex; 
+}
+
+.radiobutton__main:not(:last-child) {
+  margin: 0 0 15px 0;
+} 
+
+.radiobutton__input {
+  cursor: pointer; 
+  margin-top: 3px;   
+}
+.radiobutton__label {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.43; 
+  padding-left: 8px;   
+}
+
+.summary__apply {
+  margin-bottom: 29px;
+}
+.apply {
+  display: flex;
+  flex-direction: column;
+}
+.apply__title {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 5px 0;
+}
+.apply__subtitle {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 2.1;
+}
+.apply__input {
+  height: 50px;
+  padding: 0 17px;
+  background-color: #FFFFFF;
+  border: 1px solid #A2A6B0;
+  border-radius: 4px;
+  margin: 0 0 19px 0;
+  transition: all 0.3s ease 0s;
+}
+
+.apply__input:hover {
+  background-color: #f3f4f7;
+}
+
+.apply__button {
+  cursor: pointer;
+  background-color: #F5F7FF;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0156FF;
+  padding: 5px 30px;
+  border: 2px solid #0156FF;
+  border-radius: 50px;
+  min-height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+}
+
+.apply__button:hover {
+  background-color: #e7e8ee;
+}
+
+/* блок checkout */
+
+.page__checkout {
+  margin-bottom: 50px;
+  background-color: #f3f4f7;
+}
+.checkout {
+  padding: 20px 0 20px 0;
+}
+.checkout__container {
+  background: #FFFFFF;
+  max-width: 615px;
+  padding: 18px 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.checkout__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-checkout__top {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 29px;
+  align-items: center;
+  margin-bottom: 43px;
+}
+.form-checkout__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.form-checkout__button {
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #0156FF;
+  border: 2px solid #0156FF;
+  border-radius: 50px;
+  padding: 12px 20px;
+  min-width: 208px;
+  transition: all 0.3s ease 0s;
+}
+
+.form-checkout__button:hover {
+  background-color: #e7e8ee;
+}
+
+
+.form-checkout__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 14px;
+}
+
+.form-checkout__one-line {
+  border: 1px solid #CACDD8; 
+}
+
+.form-checkout__one-line:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.form-checkout__line {
+  display: flex;
+  flex-direction: column;  
+  margin-bottom: 12px;
+}
+
+.form-checkout__text {
+  font-size: 13px;
+  line-height: 2.1;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.column_one {
+  margin-bottom: 11px;
+}
+
+.form-checkout__label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 2.1;
+}
+.form-checkout__select {
+  background-color: #FFFFFF;  
+  border: 1px solid #A2A6B0;
+  border-radius: 4px;
+  height: 50px;
+  padding-left: 17px;
+}
+
+.form-checkout__radiobutton {
+  margin-bottom: 20px;
+}
+
+.form-checkout__button-next {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #FFFFFF;
+  background: #0156FF;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 12px 10px;
+  max-width: 210px;
+}
+
+.form-checkout__button-next:hover {
+  background-color: #073aa2;
+}
+
+.form-checkout__line input {
+  transition: all 0.3s ease 0s;
+}
+
+.form-checkout__line select {
+  transition: all 0.3s ease 0s;
+}
+
+
+.form-checkout__line input:hover {
+  background-color: #f3f4f7;
+}
+
+.form-checkout__line select:hover {
+  background-color: #f3f4f7;
+}

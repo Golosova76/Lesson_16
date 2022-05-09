@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Lesson 16</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">Я header</div>
+      </header>
+      <main class="page">
+        <div class="page__an-make make-an">
+          <div class="make-an__container">
+            <div class="make-an__content">
+              <div class="make-an__forms form-make">
+                <h3 class="form-make__title">Make an appointment</h3>
+                <form action="#" class="form-make__body body-item">
+                  <div class="body-item__columns">
+                    <div class="body-item__column">
+                      <input required type="text" name="username" class="body-item__name" placeholder="Name" />
+                    </div>
+                    <div class="body-item__column">
+                      <input required type="email" name="useremail" placeholder="Email" class="body-item__email" />
+                    </div>
+                    <div class="body-item__column">
+                      <input required type="tel" name="userphone" placeholder="Phone Number" class="body-item__phone" />
+                    </div>
+                    <div class="body-item__column">
+                      <select name="service" class="body-item__service">
+                        <option selected value="">Select Service</option>
+                        <option value="1">Item № 1</option>
+                        <option value="2">Item № 2</option>
+                        <option value="3">Item № 3</option>
+                        <option value="4">Item № 4</option>
+                      </select>
+                    </div>
+                    <div class="body-item__column">
+                      <textarea
+                        name="text"
+                        placeholder="Tell us about your puppers include his/her name"
+                        class="body-item__textarea"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="body-item__make">
+                    <button type="submit" class="body-item__button button">Make an appointment</button>
+                  </div>
+                </form>
+              </div>
+              <div class="make-an__body">
+                <div class="make-an__text">Maxime placeat facere possimus omnis</div>
+                <div class="make-an__statistics">5,700+</div>
+                <div class="make-an__label">customers served</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page__customers customers">
+          <div class="customers__container">
+            <h3 class="customers__title">Registered Customers</h3>
+            <p class="customers__text">If you have an account, sign in with your email address.</p>
+            <form action="#" class="customers__form form-customers">
+              <div class="form-customers__email email-customer">
+                <label for="customers-email" class="email-customer__label label">
+                  Email <span class="email-customer__span span">*</span>
+                </label>
+                <input
+                  required
+                  type="email"
+                  name="useremail"
+                  placeholder="Your Email"
+                  id="customers-email"
+                  class="email-customer__column column"
+                />
+              </div>
+              <div class="form-customers__pass pass-customer">
+                <label for="customers-pass" class="pass-customer__label label">
+                  Password <span class="pass-customer__span span">*</span>
+                </label>
+                <input
+                  required
+                  type="password"
+                  name="userpass"
+                  placeholder="Your Password"
+                  class="pass-customer__column column"
+                  id="customers-pass"
+                />
+              </div>
+              <div class="form-customers__buttons">
+                <button type="submit" class="form-customers__button">Sign In</button>
+                <a href="#" class="form-customers__link">Forgot Your Password?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page__summary summary">
+          <div class="summary__container">
+            <h2 class="summary__title">Summary</h2>
+            <h3 class="summary__subtitle">Estimate Shipping and Tax</h3>
+            <div class="summary__text">Enter your destination to get a shipping estimate.</div>
+            <form action="#" class="summary__form">
+              <div class="summary__destination">
+                <div class="summary__item">
+                  <label for="country" class="summary__label">Country</label>
+                  <select name="country" id="country" class="summary__line">
+                    <option selected value="Australia" class="summary__option">Australia</option>
+                    <option value="1" class="summary__option">USA</option>
+                    <option value="2" class="summary__option">New Zealand</option>
+                  </select>
+                </div>
+                <div class="summary__item">
+                  <label for="state" class="summary__label">State/Province</label>
+                  <input required type="text" name="state" id="state" class="summary__line" />
+                </div>
+                <div class="summary__item">
+                  <label for="zip" class="summary__label">Zip/Postal Code</label>
+                  <input required type="text" name="zip" id="zip" class="summary__line" />
+                </div>
+              </div>
+              <div class="summary__radiobutton radiobutton">
+                <div class="radiobutton__body">
+                  <label for="choice" class="radiobutton__subtitle">Standard Rate</label>
+                  <div class="radiobutton__item">
+                    <input checked type="radio" name="choice" id="choice" class="radiobutton__input" />
+                    <label for="choice" class="radiobutton__label"
+                      >Price may vary depending on the item/destination. Shop Staff will contact you. $21.00
+                    </label>
+                  </div>
+                </div>
+                <div class="radiobutton__body">
+                  <label for="choice_one" class="radiobutton__subtitle">Pickup from store</label>
+                  <div class="radiobutton__item">
+                    <input type="radio" name="choice" id="choice_one" class="radiobutton__input" />
+                    <label for="choice_one" class="radiobutton__label">1234 Street Adress City Address, 1234 $0.00</label>
+                  </div>
+                </div>
+              </div>
+              <div class="summary__apply apply">
+                <h3 class="apply__title">Apply Discount Code</h3>
+                <h4 class="apply__subtitle">Enter discount code</h4>
+                <input type="text" name="discount" placeholder="Enter Discount code" class="apply__input" />
+                <button type="submit" class="apply__button">Apply Discount</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page__checkout checkout">
+          <div class="checkout__container">
+            <form action="#" class="checkout__form form-checkout">
+              <div class="form-checkout__top">
+                <h2 class="form-checkout__title">Checkout</h2>
+                <button type="submit" class="form-checkout__button">Sign In</button>
+              </div>
+              <h3 class="form-checkout__subtitle">Shipping Address</h3>
+              <div class="form-checkout__one-line"></div>
+              <div class="form-checkout__line">
+                <label for="email" class="form-checkout__label label">
+                  Email Address <span class="form-checkout__span span">*</span>
+                </label>
+                <input required type="email" name="useremail" class="form-checkout__input column" id="email" />
+              </div>
+              <p class="form-checkout__text">You can create an account after checkout.</p>
+              <div class="form-checkout__one-line"></div>
+              <div class="form-checkout__line">
+                <label for="first_name" class="form-checkout__label label">
+                  First Name <span class="form-checkout__span span">*</span>
+                </label>
+                <input required type="text" name="username" class="form-checkout__input column" id="first_name" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="last_name" class="form-checkout__label label">
+                  Last Name <span class="form-checkout__span span">*</span>
+                </label>
+                <input required type="text" name="username" class="form-checkout__input column" id="last_name" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="company" class="form-checkout__label label"> Company <span class="form-checkout__span span">*</span> </label>
+                <input required type="text" name="text" class="form-checkout__input column" id="company" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="adress" class="form-checkout__label label">
+                  Street Address <span class="form-checkout__span span">*</span>
+                </label>
+                <input required type="text" name="adress" class="form-checkout__input column column_one" id="adress" />
+                <input required type="text" name="adress" class="form-checkout__input column" id="adress-1" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="city" class="form-checkout__label label"> City <span class="form-checkout__span span">*</span> </label>
+                <input required type="text" name="text" class="form-checkout__input column" id="city" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="province" class="form-checkout__label">State/Province</label>
+                <select name="country" id="province" class="form-checkout__select">
+                  <option selected value="Australia" class="form-checkout__option">Please, select a region, state or province</option>
+                  <option value="1" class="form-checkout__option">region, state or province</option>
+                  <option value="2" class="form-checkout__option">region, state or province</option>
+                </select>
+              </div>
+              <div class="form-checkout__line">
+                <label for="postal" class="form-checkout__label label">
+                  Zip/Postal Code <span class="form-checkout__span span">*</span>
+                </label>
+                <input required type="text" name="text" class="form-checkout__input column" id="postal" />
+              </div>
+              <div class="form-checkout__line">
+                <label for="country-one" class="form-checkout__label">Country</label>
+                <select name="country" id="country-one" class="form-checkout__select">
+                  <option selected value="country" class="form-checkout__option">United States</option>
+                  <option value="1" class="form-checkout__option">Canada</option>
+                  <option value="2" class="form-checkout__option">New Zealand</option>
+                </select>
+              </div>
+              <div class="form-checkout__line">
+                <label for="phone" class="form-checkout__label label"> Phone Number <span class="form-checkout__span span">*</span> </label>
+                <input required type="tel" name="userphone" class="form-checkout__input column" id="phone" />
+              </div>
+              <div class="form-checkout__one-line"></div>
+              <div class="form-checkout__radiobutton radiobutton">
+                <div class="radiobutton__body">
+                  <label for="choice-checkout" class="radiobutton__subtitle">Standard Rate</label>
+                  <div class="radiobutton__item">
+                    <input checked type="radio" name="choice" id="choice-checkout" class="radiobutton__input" />
+                    <label for="choice-checkout" class="radiobutton__label"
+                      >Price may vary depending on the item/destination. Shop Staff will contact you. $21.00
+                    </label>
+                  </div>
+                </div>
+                <div class="radiobutton__body">
+                  <label for="choice_two" class="radiobutton__subtitle">Pickup from store</label>
+                  <div class="radiobutton__item">
+                    <input type="radio" name="choice" id="choice_two" class="radiobutton__input" />
+                    <label for="choice_two" class="radiobutton__label">1234 Street Adress City Address, 1234 $0.00</label>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="form-checkout__button-next">Next</button>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">Я footer</div>
+      </footer>
+    </div>
+  </body>
+</html>
